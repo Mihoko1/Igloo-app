@@ -9,6 +9,11 @@ const app = express();
 const session = require('express-session');
 const conferenceRouter = require('./routes/conferenceRouter');
 
+// Import dotenv package for enviromental variables if the enviroment is not production
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
 // Set EJS as templating engine
 app.set('view engine', 'ejs');
 // Place view files in the /views folder
