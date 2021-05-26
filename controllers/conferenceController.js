@@ -1,6 +1,7 @@
 "use strict";
 
 function index(req, res) {
+    // res.render('index.ejs');
     res.render('index.ejs');
 }
 

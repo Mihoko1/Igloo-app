@@ -4,12 +4,15 @@
   "description": "Igloo Video Conferencing",
   "main": "server.js",
   "scripts": {
-    "startprod": "node server.js",
-    "startdev": "nodemon server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "PORT=3002 npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "author": "Team Igloo",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^6.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
